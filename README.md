@@ -60,7 +60,7 @@ Até o momento possui rotas para dados diários:<br>
 4- Etfs dos Estados Unidos - events/etf/us/<br>
 
 
-## Estatísticas e Informações
+# Estatísticas e Informações
 Rotas feitas para facilitar consulta de dados de ativos e períodos existentes.<br>
 Até o momento possui rotas para:<br>
 
