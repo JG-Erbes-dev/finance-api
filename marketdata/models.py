@@ -6,7 +6,7 @@ class BrStock(models.Model):
     ticker = models.ForeignKey(BrStock_S, on_delete=models.PROTECT, db_index=True,
                                related_name='br_stocks', verbose_name='Código')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
@@ -24,7 +24,7 @@ class UsStock(models.Model):
     ticker = models.ForeignKey(UsStock_S, on_delete=models.PROTECT, db_index=True,
                                related_name='us_stocks', verbose_name='Código')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
@@ -42,7 +42,7 @@ class BrRealEstate(models.Model):
     ticker = models.ForeignKey(BrRealEstate_S, on_delete=models.PROTECT, db_index=True,
                                related_name='br_realestates', verbose_name='Código')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
@@ -60,7 +60,7 @@ class UsEtf(models.Model):
     ticker = models.ForeignKey(UsEtf_S, on_delete=models.PROTECT, db_index=True,
                                related_name='us_etfs', verbose_name='Código')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
@@ -78,7 +78,7 @@ class Crypto(models.Model):
     ticker = models.ForeignKey(Crypto_S, on_delete=models.PROTECT, db_index=True,
                                related_name='cryptos', verbose_name='Código')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
@@ -96,7 +96,7 @@ class BrTreasure(models.Model):
     title = models.ForeignKey(BrTreasure_S, on_delete=models.PROTECT, db_index=True,
                               related_name='br_treasures', blank=True, null=True, verbose_name='Título')
     date = models.DateField(verbose_name='Data')
-    price = models.FloatField(verbose_name='Preço')
+    price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Preço')
     volume = models.FloatField(blank=True, null=True, verbose_name='Volume')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
