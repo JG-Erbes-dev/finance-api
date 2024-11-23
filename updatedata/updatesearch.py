@@ -9,6 +9,7 @@ from search.models import BrStock, UsStock, BrRealEstate, UsEtf, Crypto, BrTreas
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
+
 load_dotenv()
 api_key = os.getenv('X-CMC_PRO_API_KEY')
 
@@ -16,12 +17,9 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 MODELS_TO_UPDATE = [
-    {'model': BrStock, 'is_brazilian': True},
-    {'model': UsStock, 'is_brazilian': False},
-    {'model': BrRealEstate, 'is_brazilian': True},
-    {'model': UsEtf, 'is_brazilian': False},
+    {'model': UsStock},
+    {'model': UsEtf},
 ]
-
 
 def save_csv_data_to_db(csv_file_path, model):
     try:
@@ -54,54 +52,6 @@ def save_csv_data_to_db(csv_file_path, model):
             logging.warning('O arquivo CSV está vazio.')
     except Exception as e:
         logging.error(f'Ocorreu um erro ao ler o arquivo CSV: {e}')
-
-
-def fetch_br_realestate_data():
-    url = "https://fiis.com.br/ifix/"
-    headers = {
-        'User-Agent': 'Mozilla/5.0'
-    }
-
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, 'html.parser')
-        table = soup.find('table')
-
-        if table:
-            with transaction.atomic():
-                records_to_update = []
-                records_to_create = []
-
-                for row in table.find_all('tr')[1:]:
-                    ticker_cell = row.find('th', class_='ticker')
-                    name_cell = row.find_all('td')[1]
-
-                    if ticker_cell and name_cell:
-                        ticker = ticker_cell.a.text.strip()
-                        name = name_cell.text.strip()
-
-                        instance = BrRealEstate.objects.filter(ticker=ticker).first()
-                        if instance:
-                            if instance.name != name:
-                                instance.name = name
-                                records_to_update.append(instance)
-                        else:
-                            records_to_create.append(BrRealEstate(ticker=ticker, name=name))
-
-                if records_to_create:
-                    BrRealEstate.objects.bulk_create(records_to_create)
-                    logging.info(f'{len(records_to_create)} registros criados com sucesso.')
-                if records_to_update:
-                    BrRealEstate.objects.bulk_update(records_to_update, ['name'])
-                    logging.info(f'{len(records_to_update)} registros atualizados com sucesso.')
-        else:
-            logging.warning('Tabela não encontrada na página.')
-    except requests.HTTPError as http_err:
-        logging.error(f'Erro HTTP ao acessar o site: {http_err}')
-    except Exception as e:
-        logging.error(f'Ocorreu um erro ao coletar dados de imóveis: {e}')
 
 def fetch_crypto_data():
     url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
@@ -173,7 +123,6 @@ def save_treasure_csv_data_to_db(csv_file_path):
 def update_sector_and_industry():
     for model_info in MODELS_TO_UPDATE:
         model = model_info['model']
-        is_brazilian = model_info['is_brazilian']
 
         instances = model.objects.all()
 
@@ -181,7 +130,7 @@ def update_sector_and_industry():
             records_to_update = []
 
             for instance in instances:
-                ticker_symbol = instance.ticker + '.SA' if is_brazilian else instance.ticker
+                ticker_symbol = instance.ticker
                 try:
                     ticker_info = yf.Ticker(ticker_symbol).info
                     new_sector = ticker_info.get('sector', '')
@@ -259,12 +208,12 @@ def execute_all():
     """
     Executa as funções para coletar dados e salvar no banco de dados.
     """
-    fetch_br_realestate_data()
     fetch_crypto_data()
     download_and_save_csv(csv_url, local_file_path, original_file_name)
     save_treasure_csv_data_to_db('BrTreasure.csv')
     save_csv_data_to_db('BrStocks.csv', BrStock)
     save_csv_data_to_db('UsStocks.csv', UsStock)
+    save_csv_data_to_db('BrRealEstate.csv', BrRealEstate)
     save_csv_data_to_db('UsEtf.csv', UsEtf)
     update_sector_and_industry()
     update_category()

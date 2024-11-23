@@ -1,0 +1,131 @@
+id,ticker,name,type,segment,management
+1,KNIP11,Kinea Índice de Preços,Papel,Títulos e Valores,Ativa
+2,KNCR11,Kinea Rendimentos Imobiliários,Papel,Títulos e Valores,Ativa
+3,XPML11,XP Malls,Tijolo,Shoppings,Ativa
+4,HGLG11,CGHG Logística,Tijolo,Logística,Ativa
+5,KNRI11,Kinea Renda Imobiliária,Papel,Títulos e Valores,Ativa
+6,BTLG11,BTG PACTUAL LOGISTICA FDO INV IMOB – FII,Tijolo,Logística,Ativa
+7,HGRU11,CSHG Renda Urbana,Híbrido,Misto,Ativa
+8,MXRF11,Maxi Renda,Papel,Títulos e Valores,Ativa
+9,VISC11,Vinci Shopping Centers,Tijolo,Shoppings,Ativa
+10,XPLG11,XP Log,Tijolo,Logística,Ativa
+11,KNHY11,Kinea High Yield CRI,Papel,Títulos e Valores,Ativa
+12,HGBS11,CSHG Brasil Shopping,Tijolo,Shoppings,Ativa
+13,CPTS11,Capitania Securities II,Papel,Títulos e Valores,Ativa
+14,IRDM11,Iridium Recebíveis Imobiliários,Papel,Títulos e Valores,Ativa
+15,TGAR11,TG Ativo Real,Híbrido,Desenvolvimento,Ativa
+16,PVBI11,FDO. INV. IMOB. VBI PRIME PROPERTIES,Tijolo,Lajes Corporativas,Ativa
+17,RECR11,FII REC Recebíveis Imobiliários,Papel,Títulos e Valores,Ativa
+18,BRCO11,BRESCO LOGÍSTICA – FDO INV IMOB,Tijolo,Logística,Ativa
+20,TRXF11,TRX Real Estate,Híbrido,Misto,Ativa
+21,HSML11,HSI MALL FDO INV IMOB,Tijolo,Shoppings,Ativa
+22,KNHF11,KINEA HEDGE FUND FDO DE INV IMOB,Híbrido,Indefinido,Ativa
+23,RZTR11,FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA TERRAX,Híbrido,Misto,Ativa
+25,LVBI11,FDO INV IMOB – VBI LOGÍSTICO,Tijolo,Logística,Ativa
+26,MCCI11,FDO INV. MAUA CAPITAL RECEBIVEIS IMOB. – FII,Papel,Títulos e Valores,Ativa
+27,HFOF11,Hedge Top FOFII 3,Fundo de Fundos,Títulos e Valores,Ativa
+28,KNUQ11,KINEA UNIQUE HY CDI FUNDO DE INVESTIMENTO IMOB,Papel,Títulos e Valores,Ativa
+29,HGCR11,CGHG Recebíveis Imobiliários,Papel,Títulos e Valores,Ativa
+30,TVRI11,Tivio Renda Imobiliária,Tijolo,Agência Bancária,Ativa
+31,BRCR11,BTG Pactual Corporate Office,Tijolo,Lajes Corporativas,Ativa
+32,VRTA11,Fator Verita,Papel,Títulos e Valores,Ativa
+33,HGRE11,CSHG Real Estate,Tijolo,Lajes Corporativas,Ativa
+34,JSRE11,JS Real Estate Multigestão,Híbrido,Misto,Ativa
+35,VCJR11,VECTIS JUROS REAL FDO INV. IMOB. – FII,Papel,Títulos e Valores,Ativa
+36,RBRR11,RBR Rendimento High Grade,Papel,Títulos e Valores,Ativa
+37,ALZR11,Alianza Trust Renda Imobiliária,Fundo de Fundos,Misto,Ativa
+38,VGHF11,VALORA HEDGE FUND,Fundo de Fundos,Misto,Ativa
+39,HSLG11,HSI LOGÍSTICA,Tijolo,Logística,Ativa
+40,RBVA11,Rio Bravo Renda Varejo,Tijolo,Varejo,Ativa
+41,VILG11,VINCI LOGÍSTICA FDO INV IMOB,Tijolo,Logística,Ativa
+42,GGRC11,GGR Covepi Renda,Tijolo,Logística,Ativa
+43,KNSC11,KINEA SECURITIES FDO. DE INV. IMOB. – FII,Papel,Títulos e Valores,Ativa
+44,RBRY11,FDO INV IMOB RBR PRIVATE CRÉDITO IMOB,Papel,Títulos e Valores,Ativa
+46,VGIP11,VALORA CRI ÍNDICE DE PREÇO FDO INVEST. IMOB. FII,Papel,Títulos e Valores,Ativa
+47,GARE11,GUARDIAN LOGISTICA,Tijolo,Logística,Ativa
+49,MALL11,Malls Brasil Plural,Tijolo,Shoppings,Ativa
+50,RBRF11,RBR ALPHA MULTIESTRATÉGIA REAL ESTATE FDO INV IMOB,Fundo de Fundos,Títulos e Valores,Ativa
+51,URPR11,URCA PRIME RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO,Papel,Títulos e Valores,Ativa
+52,VGIR11,Valora RE III,Papel,Títulos e Valores,Ativa
+53,MCHY11,FDO DE INV IMOB MAUÁ CAPITAL HIGH YIELD – FII,Papel,Títulos e Valores,Ativa
+54,CVBI11,FDO INV. IMOB. VBI CRI,Papel,Títulos e Valores,Ativa
+55,BTCI11,BTG PACTUAL CRÉDITO IMOBILIÁRIO,Papel,Títulos e Valores,Ativa
+56,GTWR11,FDO INV IMOB GREEN TOWERS,Tijolo,Lajes Corporativas,Ativa
+57,KORE11,KINEA OPORTUNIDADES REAL ESTATE FDO DE INV IMOB,Tijolo,Lajes Corporativas,Ativa
+59,JSAF11,JS ATIVOS FINANCEIROS FUNDO DE INVESTIMENTO IMOBIL,Fundo de Fundos,Títulos e Valores,Ativa
+60,HABT11,HABITAT II – FDO INV IMOB,Papel,Títulos e Valores,Ativa
+61,XPCI11,XP CREDITO IMOBILIÁRIO – FDO INV IMOB,Papel,Títulos e Valores,Ativa
+62,RZAK11,RIZA AKIN,Papel,Títulos e Valores,Ativa
+65,VINO11,VINCI OFFICES FDO INV IMOB,Tijolo,Lajes Corporativas,Ativa
+66,TRBL11,Tellus Rio Bravo Renda Logística,Tijolo,Logística,Ativa
+67,HCTR11,HECTARE CE – FDO INV IMOB,Papel,Títulos e Valores,Ativa
+68,CPSH11,SHOPPINGS AAA FDO DE INV IMOB,Tijolo,Shoppings,Ativa
+69,RBRP11,RBR Properties,Tijolo,Lajes Corporativas,Ativa
+70,HGPO11,CSHG PRIME OFFICES FDO INV IMOB,Tijolo,Lajes Corporativas,Passiva
+71,BROF11,BRPR CORPORATE OFFICES FDO DE INV IMOB,Tijolo,Lajes Corporativas,Ativa
+72,RBRL11,RBR LOG FUNDO DE INVESTIMENTO IMOBILIÁRIO,Tijolo,Logística,Ativa
+73,XPIN11,XP Industrial,Tijolo,Indústria e Logística,Ativa
+74,RCRB11,FDO INV IMOB RIO BRAVO RENDA CORPORATIVA,Tijolo,Lajes Corporativas,Ativa
+75,DEVA11,DEVANT RECEBÍVEIS IMOBILIÁRIOS,Papel,Títulos e Valores,Ativa
+76,AFHI11,AF INVEST CRI,Papel,Títulos e Valores,Ativa
+77,MFII11,Mérito Desenvolvimento Imobiliário,Híbrido,Desenvolvimento,Ativa
+78,BTAL11,BTG PACTUAL AGRO LOGÍSTICA,Tijolo,Agro,Ativa
+79,BCRI11,Banestes Recebíveis Imobiliários,Papel,Títulos e Valores,Ativa
+80,KFOF11,FUNDO DE FDO INV IMOB KINEA FII,Fundo de Fundos,Títulos e Valores,Ativa
+82,CACR11,CARTESIA RECEBÍVEIS IMOBILIÁRIOS,Híbrido,Títulos e Valores,Ativa
+83,FIIB11,Industrial do Brasil,Híbrido,Indústria e Logística,Passiva
+84,TEPP11,TELLUS PROPERTIES – FDO INV. IMOB,Tijolo,Lajes Corporativas,Ativa
+85,SNCI11,SUNO RECEBÍVEIS IMOBILIÁRIOS FDO DE INV IMOB,Papel,Títulos e Valores,Ativa
+86,CLIN11,CLAVE ÍNDICES DE PREÇOS FDO DE INV IMOB,Fundo de Fundos,Títulos e Valores,Ativa
+87,BARI11,FDO INV IMOB BARIGUI RENDIMENTOS IMOB I FII,Papel,Títulos e Valores,Ativa
+88,SARE11,SANTANDER RENDA DE ALUGUÉIS FDO. INVEST. IMOB.,Híbrido,Misto,Ativa
+89,KISU11,KILIMA FIC FDO. IMOB. SUNO 30,Fundo de Fundos,Títulos e Valores,Ativa
+90,SNFF11,Suno Fundo de Fundos,Fundo de Fundos,Títulos e Valores,Ativa
+91,KCRE11,KINEA CREDITAS FDO DE INV IMOBILIÁRIO,Papel,Títulos e Valores,Ativa
+92,BCIA11,Bradesco Carteira Imobiliária Ativa,Fundo de Fundos,Títulos e Valores,Ativa
+93,RZAT11,Riza Arctium Real Estate,Híbrido,Indústria e Logística,Ativa
+94,PORD11,Polo Recebíveis Imobiliários II,Papel,Títulos e Valores,Ativa
+95,OUJP11,OURINVEST JPP,Papel,Títulos e Valores,Ativa
+98,BPFF11,Brasil Plural Absoluto Fundo de Fundos,Fundo de Fundos,Títulos e Valores,Ativa
+99,PATL11,PÁTRIA LOGÍSTICA FUNDO DE INVESTIMENTO IMOBILIÁRIO,Tijolo,Desenvolvimento,Ativa
+100,QAGR11,QUASAR AGRO – FDO INV. IMOB.,Outros,Indefinido,Ativa
+101,XPSF11,XP SELECTION FDO DE FUNDOS INV IMOB – FII,Fundo de Fundos,Títulos e Valores,Ativa
+102,NSLU11,Hospital Nossa Sra Lourdes,Tijolo,Hospitalar,Passiva
+103,HTMX11,Hotel Maxinvest,Tijolo,Hotéis,Ativa
+104,INLG11,INTER LOG FDO INV IMOB,Tijolo,Logística,Ativa
+105,AIEC11,AUTONOMY EDIFÍCIOS CORPORATIVOS,Tijolo,Lajes Corporativas,Ativa
+106,WHGR11,WHG REAL ESTATE FUNDO DE INVESTIMENTO IMOBILIÁRIO,Híbrido,Indefinido,Ativa
+107,RECT11,FDO INV IMOB – FII UBS (BR) OFFICE,Tijolo,Lajes Corporativas,Ativa
+108,VTLT11,Votorantim Logística,Tijolo,Logística,Ativa
+109,AJFI11,AJ MALLS FDO DE INV IMOB,Tijolo,Shoppings,Ativa
+110,FATN11,FUNDO DE INVESTIMENTO IMOBILIÁRIO ATHENA I,Tijolo,Lajes Corporativas,Ativa
+111,HGFF11,CSHG IMOB. FOF – FDO INV. IMOB. – FII,Fundo de Fundos,Títulos e Valores,Ativa
+112,HSAF11,HSI ATIVOS FINANCEIROS FUNDO DE INVESTIMENTO IMOBI,Papel,Títulos e Valores,Ativa
+113,SPXS11,SPX SYN MULT,Híbrido,Títulos e Valores,Ativa
+114,RBFF11,RIO BRAVO IFIX FDO INV IMOB,Fundo de Fundos,Títulos e Valores,Ativa
+117,RBHG11,RIO BRAVO CREDITO IMOB HIGH GRADE,Papel,Títulos e Valores,Ativa
+118,RBRX11,RBR PLUS MULTIESTRATÉGIA REAL ESTATE FII,Híbrido,Títulos e Valores,Ativa
+120,CPFF11,CAPITÂNIA REIT FOF – FDO. INVEST. IMOB,Fundo de Fundos,Títulos e Valores,Ativa
+121,PLCR11,FDO INV. IMOB. PLURAL RECEBIVEIS,Papel,Títulos e Valores,Ativa
+122,BTRA11,FDO INV IMOB BTG PACTUAL TERRAS AGRÍCOLAS,Tijolo,Agro,Ativa
+123,SNEL11,FUNDO DE INVEST IMOBILIARIO SUNO ENERGIAS LIMPAS,Híbrido,Desenvolvimento,Ativa
+124,VIUR11,VINCI IMÓVEIS URBANOS,Híbrido,Misto,Ativa
+125,VCRI11,VINCI CREDIT SECURITIES FUNDO DE INVESTIMENTO IMOB,Papel,Títulos e Valores,Ativa
+126,ARRI11,FDO. INV. IMOB. ÁTRIO REIT RECEBÍVEIS IMOBILIÁRIOS,Papel,Títulos e Valores,Ativa
+127,CYCR11,CYRELA CRÉDITO – FUNDO DE INVESTIMENTO IMOBILIÁRIO,Papel,Títulos e Valores,Ativa
+128,NCHB11,FII NCH BRASIL RECEBÍVEIS IMOBILIÁRIOS,Papel,Títulos e Valores,Ativa
+129,BLMG11,BLUEMACAW LOGÍSTICA,Híbrido,Indústria e Logística,Ativa
+130,SADI11,SANTANDER PAPEIS IMOB CDI FDO INV IMOB,Papel,Títulos e Valores,Ativa
+131,RVBI11,VBI REITS FOF – FDO. INV. IMOB,Fundo de Fundos,Títulos e Valores,Ativa
+132,XPPR11,XP PROPERTIES FDO. INV. IMOB.,Tijolo,Lajes Corporativas,Ativa
+133,HOFC11,RB CAPITAL OFFICE INCOME FDO INV. IMOB.,Tijolo,Lajes Corporativas,Ativa
+134,ZAVI11,Zavit Real Estate,Híbrido,Indefinido,Ativa
+135,VSLH11,VERSALHES RECEBÍVEIS IMOBILIÁRIOS,Híbrido,Papel,Ativa
+136,JPPA11,JPP ALLOCATION MOGNO – FDO INV IMOB,Papel,Títulos e Valores,Ativa
+137,SPTW11,SP Downtown,Tijolo,Lajes Corporativas,Passiva
+138,IBCR11,FDO DE INV IMOBILIÁRIO DE CRI INTEGRAL BREI,Papel,Títulos e Valores,Ativa
+139,RELG11,REC LOGISTICA,Híbrido,Indústria e Logística,Ativa
+140,CARE11,Brazilian Graveyard and Death Care,Híbrido,Misto,Ativa
+141,VIFI11,VINCI INSTRUMENTOS FINANCEIROS FDO INV IMOB – FII,Papel,Títulos e Valores,Ativa
+142,CNES11,CENESP,Tijolo,Lajes Corporativas,Ativa
+143,TORD11,TORDESILHAS EI FDO. INV. IMOB.,Híbrido,Misto,Ativa
