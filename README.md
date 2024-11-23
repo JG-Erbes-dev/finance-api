@@ -87,7 +87,7 @@ Até o momento possui rotas para:<br>
 
 
 # Ainda falta implementar:
-## Módulos em fase de estudo e estruturação do planejamento:
+Módulos em fase de estudo e estruturação do planejamento:<br>
 
 1- Métricas de Valuation<br>
 2- Dados dos Balanços<br>
