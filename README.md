@@ -64,25 +64,25 @@ Até o momento possui rotas para dados diários:<br>
 Rotas feitas para facilitar consulta de dados de ativos e períodos existentes.<br>
 Até o momento possui rotas para:<br>
 
-# 1- Estatísticas Gerais da API - stats/
+## 1- Estatísticas Gerais da API - stats/
 ![alt text](image.png)
 
-# 2- Ações Brasileiras - stats/stock/br/
+## 2- Ações Brasileiras - stats/stock/br/
 ![alt text](image-1.png)
 
-# 3- Ações dos Estados Unidos - stats/stock/us/
+## 3- Ações dos Estados Unidos - stats/stock/us/
 ![alt text](image-2.png)
 
-# 4- FIIs Brasileiros - stats/realestate/br/
+## 4- FIIs Brasileiros - stats/realestate/br/
 ![alt text](image-3.png)
 
-# 5- Etfs dos Estados Unidos - stats/etf/us/
+## 5- Etfs dos Estados Unidos - stats/etf/us/
 ![alt text](image-4.png)
 
-# 6- Criptomoedas - stats/crypto/
+## 6- Criptomoedas - stats/crypto/
 ![alt text](image-5.png)
 
-# 7- Tesouro Direto Brasileiro - stats/treasure/br/
+## 7- Tesouro Direto Brasileiro - stats/treasure/br/
 ![alt text](image-6.png)
 
 
