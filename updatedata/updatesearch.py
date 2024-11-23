@@ -201,7 +201,7 @@ def download_and_save_csv(csv_url, local_file_path, original_file_name):
         logging.error(f"Erro ao baixar o arquivo CSV: {e}")
 
 csv_url = 'https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv'
-local_file_path = 'BrTreasure.csv'
+local_file_path = 'csv/BrTreasure.csv'
 original_file_name = 'PrecoTaxaTesouroDireto.csv'
 
 def execute_all():
@@ -211,9 +211,9 @@ def execute_all():
     fetch_crypto_data()
     download_and_save_csv(csv_url, local_file_path, original_file_name)
     save_treasure_csv_data_to_db('BrTreasure.csv')
-    save_csv_data_to_db('BrStocks.csv', BrStock)
-    save_csv_data_to_db('UsStocks.csv', UsStock)
-    save_csv_data_to_db('BrRealEstate.csv', BrRealEstate)
-    save_csv_data_to_db('UsEtf.csv', UsEtf)
+    save_csv_data_to_db('csv/BrStocks.csv', BrStock)
+    save_csv_data_to_db('csv/UsStocks.csv', UsStock)
+    save_csv_data_to_db('csv/BrRealEstate.csv', BrRealEstate)
+    save_csv_data_to_db('csv/UsEtf.csv', UsEtf)
     update_sector_and_industry()
     update_category()
