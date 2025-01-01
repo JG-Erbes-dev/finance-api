@@ -153,7 +153,7 @@ class MarketDataStatsView(views.APIView):
                     total_count = model.objects.count()
 
                     econdata_results[model_name] = {
-                        'início_dos_dados': min_date,
+                        'data_inicio': min_date,
                         'total_registros': total_count
                     }
 
