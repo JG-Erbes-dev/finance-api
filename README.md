@@ -2,7 +2,7 @@
 # finance-api
 
 API Rest ainda em desenvolvimento para obtenção de dados econômicos e dados de ativos financeiros.
-A API conta scripts e commands para atualização dos dados de forma diária de forma automatizada. (automatização ainda não implementada)
+A API conta scripts e commands para atualização dos dados diários de forma automatizada. (automatização ainda não implementada)
 
 Os dados foram retirados das fontes:<br>
 B3<br>
