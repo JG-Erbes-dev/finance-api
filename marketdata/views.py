@@ -1,5 +1,8 @@
+from django.apps import apps
+from django.db.models import Min
 from rest_framework import generics, views, response, status
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from marketdata.models import BrStock, UsStock, BrRealEstate, UsEtf, Crypto, BrTreasure, Stats
 from marketdata.serializers import BrStockSerializer, UsStockSerializer, BrRealEstateSerializer, UsEtfSerializer, CryptoSerializer, BrTreasureSerializer
 
@@ -79,8 +82,8 @@ class BrTreasureRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
 class MarketDataStatsView(views.APIView):
 
     def get(self, request, *args, **kwargs):
-        resultados = {}
-        soma_total_ativos = 0
+        results = {}
+        total_assets = 0
 
         path_segments = request.path.split('/')
         if len(path_segments) > 5:
@@ -108,36 +111,58 @@ class MarketDataStatsView(views.APIView):
                 print(f'Modelo "{model_name}" não encontrado na tabela Stats.')
                 return response.Response({'detail': 'Model não encontrado'}, status=status.HTTP_404_NOT_FOUND)
 
-            total_ativos = stats.values('ticker').distinct().count()
+            total_assets = stats.values('ticker').distinct().count()
 
-            ativos = []
-            if total_ativos > 0:
-                ativos = stats.values('ticker', 'data_inicio')
+            assets = []
+            if total_assets > 0:
+                assets = stats.values('ticker', 'data_inicio')
 
-            resultados[model_name] = {
-                'total_ativos': total_ativos,
-                'ativos': ativos
+            results[model_name] = {
+                'total_ativos': total_assets,
+                'ativos': assets
             }
 
-            return response.Response(data=resultados, status=status.HTTP_200_OK)
+            return response.Response(data=results, status=status.HTTP_200_OK)
 
         elif len(path_segments) == 5:
             modelos = ['brstock', 'usstock', 'brrealestate', 'usetf', 'crypto', 'brtreasure']
 
+            total_assets_sum = 0
+            results = {}
+
             for model_name in modelos:
                 stats = Stats.objects.filter(model=model_name)
+                total_assets = stats.values('ticker').distinct().count()
 
-                total_ativos = stats.values('ticker').distinct().count()
-
-                resultados[model_name] = {
-                    'total_ativos': total_ativos,
+                results[model_name] = {
+                    'total_ativos': total_assets,
                 }
 
-                soma_total_ativos += total_ativos
+                total_assets_sum += total_assets
 
-            resultados['ativos_em_base'] = soma_total_ativos
+            results['ativos_em_base'] = total_assets_sum
 
-            return response.Response(data=resultados, status=status.HTTP_200_OK)
+            app_label = 'econdata'
+            econdata_results = {}
+            models = apps.get_app_config(app_label).get_models()
+
+            for model in models:
+                model_name = model.__name__.lower()
+                if hasattr(model, 'date'):
+                    min_date = model.objects.aggregate(min_date=Min('date'))['min_date']
+                    total_count = model.objects.count()
+
+                    econdata_results[model_name] = {
+                        'início_dos_dados': min_date,
+                        'total_registros': total_count
+                    }
+
+            response_data = {
+                'ativos': results,
+                'dados_economicos': econdata_results
+            }
+
+            return response.Response(data=response_data, status=status.HTTP_200_OK)
 
         else:
             return response.Response({'detail': 'URL inválida'}, status=status.HTTP_400_BAD_REQUEST)

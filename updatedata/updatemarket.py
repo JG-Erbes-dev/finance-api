@@ -305,7 +305,7 @@ def get_br_treasure_data():
         except Exception as e:
             log_message(f'Erro ao processar o arquivo CSV: {e}')
 
-def coletar_e_salvar_dados():
+def colect_stats():
     app_label = 'marketdata'
     models = apps.get_app_config(app_label).get_models()
     
@@ -348,4 +348,4 @@ def execute_all():
     get_crypto_data()
     get_br_treasure_data()
     get_br_real_estate_data()
-    coletar_e_salvar_dados()
+    colect_stats()
