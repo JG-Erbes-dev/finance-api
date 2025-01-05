@@ -2,7 +2,26 @@ from django.db import models
 from search.models import BrStock as BrStock_S, UsStock as UsStock_S, BrRealEstate as BrRealEstate_S, UsEtf as UsEtf_S
 
 
+"""
+Models de armazenamento de eventos corporativos dos ativos.
+
+Este módulo contém as classes que representam os ativos disponíveis no sistema, incluindo:
+  - Ações brasileiras (BR Stock)
+  - Ações americanas (US Stock)
+  - FIIs brasileiros (BR Real Estate)
+  - ETFs americanos (US ETF)
+  - Criptomoedas (Crypto)
+  - Títulos do Tesouro Direto brasileiro (BR Treasure)
+
+Finalidade:
+  - Manter histórico para análise e estudos.
+  - Utilização para ajustes de preços históricos.
+"""
+
 class BrStock(models.Model):
+    """
+    Classe de armazenamento de eventos corporativos de ações brasileiras.
+    """
     ticker = models.ForeignKey(BrStock_S, on_delete=models.PROTECT, db_index=True,
                                related_name='events_br_stocks', verbose_name='Código')
     event_date = models.DateField(verbose_name='Data')
@@ -20,6 +39,9 @@ class BrStock(models.Model):
 
 
 class UsStock(models.Model):
+    """
+    Classe de armazenamento de eventos corporativos de ações americanas.
+    """
     ticker = models.ForeignKey(UsStock_S, on_delete=models.PROTECT, db_index=True,
                                related_name='events_us_stocks', verbose_name='Código')
     event_date = models.DateField(verbose_name='Data')
@@ -37,6 +59,9 @@ class UsStock(models.Model):
     
 
 class BrRealEstate(models.Model):
+    """
+    Classe de armazenamento de eventos corporativos de FIIs brasileiros.
+    """
     ticker = models.ForeignKey(BrRealEstate_S, on_delete=models.PROTECT, db_index=True,
                                related_name='events_br_realestates', verbose_name='Código')
     event_date = models.DateField(verbose_name='Data')
@@ -54,6 +79,9 @@ class BrRealEstate(models.Model):
     
     
 class UsEtf(models.Model):
+    """
+    Classe de armazenamento de eventos corporativos de ETFs americanos.
+    """
     ticker = models.ForeignKey(UsEtf_S, on_delete=models.PROTECT, db_index=True,
                                related_name='events_us_etfs', verbose_name='Código')
     event_date = models.DateField(verbose_name='Data')

@@ -1,7 +1,26 @@
 from django.db import models
 
 
+"""
+Models de armazenamento de dados básicos dos ativos.
+
+Este módulo contém as classes que representam os ativos disponíveis no sistema, incluindo:
+  - Ações brasileiras (BR Stock)
+  - Ações americanas (US Stock)
+  - FIIs brasileiros (BR Real Estate)
+  - ETFs americanos (US ETF)
+  - Criptomoedas (Crypto)
+  - Títulos do Tesouro Direto brasileiro (BR Treasure)
+
+Finalidade:
+  - Utilizado para buscas internas do sistema e da API.
+  - Facilita as integrações da API com fontes de dados externas (APIs e sites).
+"""
+
 class BrStock(models.Model):
+    """
+    Classe de dados básicos de ações brasileiras.
+    """
     ticker = models.CharField(max_length=30, db_index=True, verbose_name='Código')
     name = models.CharField(max_length=200, verbose_name='Nome')
     sector = models.CharField(max_length=200, verbose_name='Setor')
@@ -19,6 +38,9 @@ class BrStock(models.Model):
 
 
 class UsStock(models.Model):
+    """
+    Classe de dados básicos de ações americanas.
+    """
     ticker = models.CharField(max_length=30, db_index=True, verbose_name='Código')
     name = models.CharField(max_length=200, verbose_name='Nome')
     sector = models.CharField(max_length=200, verbose_name='Setor')
@@ -35,6 +57,9 @@ class UsStock(models.Model):
 
 
 class BrRealEstate(models.Model):
+    """
+    Classe de dados básicos de FIIs brasileiros.
+    """
     ticker = models.CharField(max_length=30, db_index=True, verbose_name='Código')
     name = models.CharField(max_length=200, verbose_name='Nome')
     type = models.CharField(max_length=200, verbose_name='Tipo')
@@ -52,6 +77,9 @@ class BrRealEstate(models.Model):
 
 
 class UsEtf(models.Model):
+    """
+    Classe de dados básicos de ETFs americanos.
+    """
     ticker = models.CharField(max_length=30, db_index=True, verbose_name='Código')
     name = models.CharField(max_length=200, verbose_name='Nome')
     category = models.CharField(max_length=200, verbose_name='Categoria')
@@ -67,6 +95,9 @@ class UsEtf(models.Model):
 
 
 class Crypto(models.Model):
+    """
+    Classe de dados básicos de criptomoedas.
+    """
     ticker = models.CharField(max_length=30, db_index=True, verbose_name='Código')
     name = models.CharField(max_length=100, verbose_name='Nome')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -80,7 +111,10 @@ class Crypto(models.Model):
         return str(self.ticker)
 
 
-class BrTreasure(models.Model):    
+class BrTreasure(models.Model):
+    """
+    Classe de dados básicos de títulos do tesouro direto brasileiro.
+    """
     title = models.CharField(max_length=200, db_index=True, unique=True, blank=True, verbose_name='Título')
     title_type = models.CharField(max_length=200, verbose_name='Tipo de Título')
     maturity = models.DateField(verbose_name='Vencimento')

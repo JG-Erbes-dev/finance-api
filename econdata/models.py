@@ -1,7 +1,30 @@
 from django.db import models
 
 
+"""
+Models de armazenamento de dados históricos de indicadores econômicos relevantes.
+
+Este módulo contém as classes que armazenam os dados históricos dos indicadores:
+  - Taxa de juros brasileira (BR Interest Rate)
+  - Taxa de juros americana (US Interest Rate)
+  - CDI brasileiro (BR CDI)
+  - CDI brasileiro acumulado (Cumulative BR CDI)
+  - Inflação brasileira (BR Inflation)
+  - Inflação brasileira acumulada (Cumulative BR Inflation)
+  - Inflação americana (US Inflation)
+  - Taxa de Câmbio Dólar/Real (Dollar Exchange Rate)
+  - Preço do Índice de Commoditie Amplo (GD=P) (Commodity Price)
+
+Finalidade:
+  - Manter o histórico para uso em análises de cenário e sazonalidade.
+  - Utilizar em comparações e estudos históricos de desempenho.
+  - Possibilidade de criação de um índice geral de mercado.
+"""
+
 class BrInterestRate(models.Model):
+    """
+    Classe de dados históricos da taxa de juros brasileira.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -17,6 +40,9 @@ class BrInterestRate(models.Model):
 
 
 class UsInterestRate(models.Model):
+    """
+    Classe de dados históricos da taxa de juros americana.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -32,6 +58,9 @@ class UsInterestRate(models.Model):
 
 
 class BrCDI(models.Model):
+    """
+    Classe de dados históricos do CDI brasileiro.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -47,6 +76,9 @@ class BrCDI(models.Model):
 
 
 class CumulativeBrCDI(models.Model):
+    """
+    Classe de dados históricos acumulados do CDI brasileiro.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -62,6 +94,9 @@ class CumulativeBrCDI(models.Model):
 
 
 class BrInflation(models.Model):
+    """
+    Classe de dados históricos da inflação brasileira.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -77,6 +112,9 @@ class BrInflation(models.Model):
     
     
 class CumulativeBrInflation(models.Model):
+    """
+    Classe de dados históricos da inflação brasileira acumulada.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -92,6 +130,9 @@ class CumulativeBrInflation(models.Model):
 
 
 class UsInflation(models.Model):
+    """
+    Classe de dados históricos da inflação americana.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -107,6 +148,9 @@ class UsInflation(models.Model):
 
 
 class DollarExchangeRate(models.Model):
+    """
+    Classe de dados históricos da taxa de juros dólar/real.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
@@ -122,6 +166,9 @@ class DollarExchangeRate(models.Model):
 
 
 class CommodityPrice(models.Model):
+    """
+    Classe de dados históricos do índice de commoditie amplo GD=P.
+    """
     date = models.DateField(unique=True, verbose_name='Data')
     value = models.FloatField(verbose_name='Valor')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')

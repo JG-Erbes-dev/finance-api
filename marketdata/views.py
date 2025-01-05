@@ -3,8 +3,8 @@ from django.db.models import Min
 from rest_framework import generics, views, response, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from marketdata.models import BrStock, UsStock, BrRealEstate, UsEtf, Crypto, BrTreasure, Stats
-from marketdata.serializers import BrStockSerializer, UsStockSerializer, BrRealEstateSerializer, UsEtfSerializer, CryptoSerializer, BrTreasureSerializer
+from .models import BrStock, UsStock, BrRealEstate, UsEtf, Crypto, BrTreasure, Stats
+from .serializers import BrStockSerializer, UsStockSerializer, BrRealEstateSerializer, UsEtfSerializer, CryptoSerializer, BrTreasureSerializer
 
 
 class BrStockListCreateView(generics.ListCreateAPIView):
@@ -80,6 +80,15 @@ class BrTreasureRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView)
 
 
 class MarketDataStatsView(views.APIView):
+    """
+    Classe de exibição dos status da app marketdata
+    
+    Finalidade:
+      - Realiza o cálculo dinâmico da contagem de ativos e suas datas iniciais de cada model.
+      - Exibe o resultado detalhado por ativo em cada url específica.
+      - Realiza o cálculo do total de dados e suas datas iniciais para os dados econômicos.
+      - Exibe o resultado detalhado por indicador para que o usuário tenha maior facilidade na utilização da API.
+    """
 
     def get(self, request, *args, **kwargs):
         results = {}
